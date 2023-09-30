@@ -4,13 +4,18 @@ using AstrophysicalCalculations
 makedocs(
     sitename="AstrophysicalCalculations",
     format=Documenter.HTML(),
-    modules=[AstrophysicalCalculations],
+    modules=[
+        AstrophysicalCalculations,
+        AstrophysicalCalculations.LightWaves,
+        AstrophysicalCalculations.StellarObservations,
+    ],
     pages=[
         "Overview" => [
             "Getting Started" => "index.md",
-            "Docstrings" => "docstrings.md"
+            "Documentation" => "reference.md",
         ],
-        "Models" => [
+        "Reference" => [
+            "Light Waves" => "lightwaves.md",
             "Stellar Observations" => "observations.md",
         ]
     ]
@@ -18,7 +23,7 @@ makedocs(
 
 deploydocs(
     target="build",
-    repo="github.com/cadojo/AstrodynamicalModels.jl.git",
+    repo="github.com/cadojo/AstrophysicalCalculations.jl.git",
     branch="gh-pages",
     devbranch="main",
     versions=["stable" => "v^", "manual", "v#.#", "v#.#.#"],

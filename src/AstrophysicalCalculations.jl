@@ -61,4 +61,7 @@ using Reexport
 include(joinpath("src", "StellarObservations.jl"))
 @reexport using .StellarObservations
 
+include(joinpath("src", "LightWaves.jl"))
+@reexport using .LightWaves
+
 end # module AstrophysicalCalculations
