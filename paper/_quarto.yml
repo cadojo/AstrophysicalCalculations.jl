@@ -2,9 +2,9 @@ project:
   type: book
 
 book:
-  title: "notes-on-modern-astrophysics"
-  author: "Norah Jones"
-  date: "9/30/2023"
+  title: "Notes on An Introduction to Modern Astrophysics"
+  author: "Joseph D Carpinelli"
+  date: today
   chapters:
     - index.qmd
     - intro.qmd
@@ -17,7 +17,5 @@ format:
   html:
     theme: cosmo
   pdf:
-    documentclass: scrreprt
-
-
-
+    shift-heading-level-by: 1
+    documentclass: hitec
