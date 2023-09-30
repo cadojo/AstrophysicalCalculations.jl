@@ -19,7 +19,7 @@ All equations and constants are pulled from Carroll and Ostlie's _An Introductio
 Modern Astrophysics_. Equations are grouped by their underlying assumptions. See the 
 BibTeX citation below for Carroll and Ostlie's textbook.
 
-    @book{carroll2017introduction,
+    @book{BOB,
         title={An Introduction to Modern Astrophysics},
         author={Carroll, Bradley W and Ostlie, Dale A},
         year={2017},

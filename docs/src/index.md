@@ -22,7 +22,7 @@ pkg> add https://github.com/cadojo/AstrophysicalCalculations.jl
 See the following BibTeX citation for this package's primary text: Carroll and Ostlie's 
 _An Introduction to Modern Astrophysics_.
 
-    @book{carroll2017introduction,
+    @book{BOB,
         title={An Introduction to Modern Astrophysics},
         author={Carroll, Bradley W and Ostlie, Dale A},
         year={2017},

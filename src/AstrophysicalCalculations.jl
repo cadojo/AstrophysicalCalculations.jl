@@ -18,7 +18,7 @@ packages within Julia (namely, `Unitful.jl`).
 Reference information for the primary text, _An Introduction to Modern Astrophysics_,
 is shown via BibTeX below.
 
-    @book{carroll2017introduction,
+    @book{BOB,
         title={An Introduction to Modern Astrophysics},
         author={Carroll, Bradley W and Ostlie, Dale A},
         year={2017},
