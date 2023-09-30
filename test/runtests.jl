@@ -2,5 +2,5 @@
 # Unit tests for AstrophysicalCalculations.jl
 #
 
-using AstrophysicalCalculations
+using Test, AstrophysicalCalculations
 @test true
