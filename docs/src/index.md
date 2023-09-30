@@ -9,6 +9,14 @@ _An Introduction to Modern Astrophysics_. For now, all of the documentation exis
 within each function or constant's docstrings. Check the sidebar for functions and 
 constants grouped into modules by their underlying assumptions and content.
 
+## Installation
+
+This package is not-yet registered.
+
+```julia
+pkg> add https://github.com/cadojo/AstrophysicalCalculations.jl
+```
+
 ## References
 
 See the following BibTeX citation for this package's primary text: Carroll and Ostlie's 
