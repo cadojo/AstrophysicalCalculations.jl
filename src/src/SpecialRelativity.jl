@@ -7,7 +7,15 @@ using DynamicQuantities
 using LinearAlgebra
 
 export
-    lorentz_factor
+    lorentz_factor,
+    doppler_shift,
+    time_dilation,
+    length_contraction,
+    redshift_parameter,
+    flux_angle,
+    kinetic_energy,
+    total_energy,
+    rest_energy
 
 """
 The relativistic factor `γ` that is within Lorentz Transformations, given reference
@@ -60,9 +68,136 @@ reference frames.
 
 ## References
 
-- (Carrol & Ostlie 93)
+- (Carrol & Ostlie 95)
 
 """
 length_contraction(Lᵣ, u) = Lᵣ / lorentz_factor(u)
+
+"""
+The relativistic doppler shift observed from an object moving with speed `u` away from the
+light, rest frequency `ν`, and radial velocity `vᵣ`.
+
+# Extended Help
+
+## Caveats
+
+This calculation is valid within the bounds of special relativity: that is, inertial 
+reference frames.
+
+## References
+
+- (Carrol & Ostlie 98)
+
+"""
+doppler_shift(ν, vᵣ, u) = ν / lorentz_factor(u) / (one(vᵣ) + (vᵣ / Constants.c))
+
+"""
+The redshift parameter `z`, which describes the change in wavelength due to redshifting
+with change in wavelength `Δλ` and rest wavelength `λᵣ`, or radial velocity `vᵣ`.
+
+# Extended Help
+
+## Caveats
+
+This calculation is valid within the bounds of special relativity: that is, inertial 
+reference frames.
+
+## References
+
+- (Carrol & Ostlie 99)
+
+"""
+redshift_parameter(Δλ, λᵣ) = Δλ / λᵣ
+redshift_parameter(vᵣ) = sqrt((one(vᵣ) + vᵣ / Constants.c) / (one(vᵣ) - vᵣ / Constants.c)) - one(vᵣ)
+
+"""
+The angle of radiant flux for a moving emitter given the Lorentz factor `γ`; this 
+phenomena is known as the _relativistic headlight effect_. 
+
+# Extended Help
+
+## Caveats
+
+This calculation is valid for velocities very close to the speed of light, and within the 
+bounds of special relativity: that is, inertial reference frames.
+
+## References
+
+- (Carrol & Ostlie 101)
+
+"""
+flux_angle(γ) = asin(inv(γ))
+
+"""
+The momentum of a particle moving at relativistic speeds, given mass `m` and velocity `v`.
+
+# Extended Help
+
+## Caveats
+
+This calculation is valid within the bounds of special relativity: that is, inertial 
+reference frames.
+
+## References
+
+- (Carrol & Ostlie 102)
+
+"""
+momentum(m, v) = lorentz_factor(norm(v)) * m * v
+
+"""
+The kinetic energy `K` of a particle moving at relativistic speeds, given mass `m` and 
+velocity `v`.
+
+# Extended Help
+
+## Caveats
+
+This calculation is valid within the bounds of special relativity: that is, inertial 
+reference frames.
+
+## References
+
+- (Carrol & Ostlie 103)
+
+"""
+kinetic_energy(m, v) = m * Constants.c^2 * (lorentz_factor(norm(v)) - 1)
+
+"""
+The total energy `E` of a particle moving at relativistic speeds, given mass `m` and 
+velocity `v`.
+
+# Extended Help
+
+## Caveats
+
+This calculation is valid within the bounds of special relativity: that is, inertial 
+reference frames.
+
+## References
+
+- (Carrol & Ostlie 103)
+
+"""
+total_energy(m, v) = m * Constants.c^2 * lorentz_factor(norm(v))
+
+"""
+The magnitude a particle's momentum `p`, given mass `m` and total energy `E`.
+
+# Extended Help
+
+## Caveats
+
+This calculation is valid within the bounds of special relativity: that is, inertial 
+reference frames.
+
+## References
+
+- (Carrol & Ostlie 103)
+
+"""
+momentum_magnitude(m, E) = sqrt((E^2 - (m^2 * Constants.c^4)) / Constants.c^2)
+
+
 
 end
