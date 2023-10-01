@@ -1,10 +1,6 @@
-"""
-Astrophysical equations relating to special relativity.
-"""
-module SpecialRelativity
-
-using DynamicQuantities
-using LinearAlgebra
+# 
+# Astrophysical equations relating to special relativity.
+# 
 
 export
     lorentz_factor,
@@ -13,9 +9,9 @@ export
     length_contraction,
     redshift_parameter,
     flux_angle,
-    kinetic_energy,
-    total_energy,
-    rest_energy
+    relativistic_kinetic_energy,
+    total_relativistic_energy,
+    momentum_magnitude
 
 """
 The relativistic factor `γ` that is within Lorentz Transformations, given reference
@@ -161,7 +157,7 @@ reference frames.
 - (Carrol & Ostlie 103)
 
 """
-kinetic_energy(m, v) = m * Constants.c^2 * (lorentz_factor(norm(v)) - 1)
+relativistic_kinetic_energy(m, v) = m * Constants.c^2 * (lorentz_factor(norm(v)) - 1)
 
 """
 The total energy `E` of a particle moving at relativistic speeds, given mass `m` and 
@@ -179,7 +175,7 @@ reference frames.
 - (Carrol & Ostlie 103)
 
 """
-total_energy(m, v) = m * Constants.c^2 * lorentz_factor(norm(v))
+total_relativistic_energy(m, v) = m * Constants.c^2 * lorentz_factor(norm(v))
 
 """
 The magnitude a particle's momentum `p`, given mass `m` and total energy `E`.
@@ -197,7 +193,3 @@ reference frames.
 
 """
 momentum_magnitude(m, E) = sqrt((E^2 - (m^2 * Constants.c^4)) / Constants.c^2)
-
-
-
-end

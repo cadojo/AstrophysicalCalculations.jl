@@ -1,9 +1,6 @@
-"""
-Astrophysical equations relating to observing distant stars.
-"""
-module StellarObservations
-
-using DynamicQuantities
+# 
+# Astrophysical equations relating to observing distant stars.
+#
 
 export
     parallax_distance,
@@ -354,4 +351,3 @@ This equation assumes the inverse square law of light.
 """
 bolometric_correction(Mᵦ, Mᵥ) = Mᵦ - Mᵥ
 
-end

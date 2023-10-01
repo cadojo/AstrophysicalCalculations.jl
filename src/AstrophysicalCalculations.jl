@@ -58,13 +58,9 @@ using Reexport
                          $(DOCSTRING)
                          """
 
-include(joinpath("paradigms", "StellarObservations.jl"))
-@reexport using .StellarObservations
-
-include(joinpath("paradigms", "LightWaves.jl"))
-@reexport using .LightWaves
-
-include(joinpath("paradigms", "SpecialRelativity.jl"))
-@reexport using .SpecialRelativity
+include(joinpath("paradigms", "stellar_observations.jl"))
+include(joinpath("paradigms", "light_waves.jl"))
+include(joinpath("paradigms", "special_relativity.jl"))
+include(joinpath("paradigms", "light_matter_interactions.jl"))
 
 end # module AstrophysicalCalculations

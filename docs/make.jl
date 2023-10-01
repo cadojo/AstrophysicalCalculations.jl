@@ -6,18 +6,10 @@ makedocs(
     format=Documenter.HTML(),
     modules=[
         AstrophysicalCalculations,
-        AstrophysicalCalculations.LightWaves,
-        AstrophysicalCalculations.StellarObservations,
     ],
     pages=[
-        "Overview" => [
-            "Getting Started" => "index.md",
-            "Documentation" => "reference.md",
-        ],
-        "Reference" => [
-            "Light Waves" => "lightwaves.md",
-            "Stellar Observations" => "observations.md",
-        ]
+        "Getting Started" => "index.md",
+        "Reference" => "reference.md",
     ]
 )
 

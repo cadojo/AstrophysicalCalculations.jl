@@ -1,11 +1,7 @@
-"""
-Astrophysical equations relating to the wave-nature of light, without any relativistic 
-effects.
-"""
-module LightWaves
-
-using DynamicQuantities
-using LinearAlgebra
+#
+# Astrophysical equations relating to the wave-nature of light, without any relativistic 
+# effects.
+# 
 
 export
     wave_speed,
@@ -136,5 +132,3 @@ This equation is valid for surfaces which completely reflect light.
 """
 reflection_pressure(S₀, A, θ) = 2S₀ * A / Constants.c * (cos(θ))^2
 reflection_pressure(E₀, B₀, A, θ) = reflection_pressure(mean_poynting(E₀, B₀), A, θ)
-
-end
