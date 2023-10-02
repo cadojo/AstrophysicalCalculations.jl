@@ -1,9 +1,15 @@
 [![Tests](https://github.com/cadojo/AstrophysicalCalculations.jl/workflows/UnitTests/badge.svg)](https://github.com/cadojo/AstrophysicalCalculations.jl/actions?query=workflow%3AUnitTests)
 [![Docs](https://github.com/cadojo/AstrophysicalCalculations.jl/workflows/Documentation/badge.svg)](https://cadojo.github.io/AstrophysicalCalculations.jl)
 
-# AstrophysicalCalculations.jl
+# `AstrophysicalCalculations.jl`
 
 _Common equations within modern astrophysics!_
+
+## Overview
+
+I am currently working through Carroll and Ostlie's _An Introduction to Modern Astrophysics_.
+As I read each chapter, I'm writing key equations here. This is an educational tool, but
+will also allow me (and others) to explore the concepts through computation later. 
 
 ## Installation
 
