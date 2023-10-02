@@ -19,7 +19,7 @@ This package is not-yet registered.
 pkg> add https://github.com/cadojo/AstrophysicalCalculations.jl
 ```
 
-## Usage
+## References
 
 All equations and constants are pulled from Carroll and Ostlie's _An Introduction to 
 Modern Astrophysics_. Equations are grouped by their underlying assumptions. See the 
