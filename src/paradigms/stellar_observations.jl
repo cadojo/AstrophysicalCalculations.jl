@@ -47,7 +47,7 @@ This calculation requires the small-angle approximation.
 
 - (Carrol & Ostlie 58)
 """
-parallax_distance(p′′) = one(p′′) / p′′ * Constants.pc
+parallax_distance(p′′) = Quantity(one(p′′) / p′′, SymbolicDimensions; pc=1)
 
 """
 The radiant flux `F` captured by a spherical shell with radius `r`, emitted by 
